@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import "./Home.css";
 import pyramidsImg from "./assets/pyramids.jpg";
 import logo from "./assets/logo.png";
@@ -13,6 +14,7 @@ import { FaArrowRight } from "react-icons/fa6";
 import { useState } from "react";
 
 export default function Home() {
+  const navigate = useNavigate();
   const [query, setQuery] = useState("");
 
   const handleSearch = (e) => {
@@ -84,7 +86,7 @@ export default function Home() {
         <div className="overlay">
           <button
             className="explore-btn"
-            onClick={() => console.log("Explore Cairo clicked")}
+            onClick={() => navigate('/explore')}
           >
             Explore Now
             <FaArrowRight className="arrow" aria-hidden="true" />
