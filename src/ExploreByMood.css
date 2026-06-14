@@ -1,0 +1,96 @@
+.mood-section {
+  width: 100%;
+  margin-top: 32px;
+  box-sizing: border-box;
+}
+
+.mood-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 16px;
+}
+
+.mood-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.mood-card {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+
+  transition: transform 0.2s ease;
+}
+
+
+.mood-card:focus-visible {
+  outline: 2px solid #2196f3;
+  outline-offset: 3px;
+}
+
+.mood-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.mood-card:hover .mood-bg-img {
+  transform: scale(1.05);
+}
+
+.mood-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.2) 60%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.mood-icon-wrapper {
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mood-icon-wrapper img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.mood-text {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  margin: 0;
+}
+
+
+@media (min-width: 768px) {
+  .mood-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .mood-title {
+    font-size: 24px;
+  }
+}
