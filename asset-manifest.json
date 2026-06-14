@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.8d8ab8fe.css",
+    "main.js": "/static/js/main.d2ef1618.js",
+    "static/js/453.a2a6eef5.chunk.js": "/static/js/453.a2a6eef5.chunk.js",
+    "static/media/family-bg.png": "/static/media/family-bg.ed6a2af3d568f10f8c6c.png",
+    "static/media/King Burger.png": "/static/media/King Burger.0bda2ce78f1d64a200c4.png",
+    "static/media/youthful-bg.png": "/static/media/youthful-bg.56da15c6297b755f8f52.png",
+    "static/media/logo.png": "/static/media/logo.d21aabcb3731780d2f6f.png",
+    "static/media/ElHaty.jpg": "/static/media/ElHaty.47c9f943f6106a227477.jpg",
+    "static/media/religious-bg.png": "/static/media/religious-bg.4264ab17082c5d9920c2.png",
+    "static/media/Strubuks.png": "/static/media/Strubuks.b839b94bb906ecec4283.png",
+    "static/media/pyramids.jpg": "/static/media/pyramids.339f60ba32a08878e832.jpg",
+    "static/media/romantic-bg.jpg": "/static/media/romantic-bg.5f768551c6f34fc7366d.jpg",
+    "static/media/Koshary.jpg": "/static/media/Koshary.b36cebd89d2d9458a07e.jpg",
+    "static/media/family-icon.png": "/static/media/family-icon.ef9a3ffae11437e2b02a.png",
+    "static/media/romantic-icon.png": "/static/media/romantic-icon.446177d2d7b53cc82a06.png",
+    "static/media/religious-icon.png": "/static/media/religious-icon.035f4f3601acf517ef35.png",
+    "static/media/youthful-icon.png": "/static/media/youthful-icon.c39523cb17aab9f1e285.png",
+    "index.html": "/index.html",
+    "main.8d8ab8fe.css.map": "/static/css/main.8d8ab8fe.css.map",
+    "main.d2ef1618.js.map": "/static/js/main.d2ef1618.js.map",
+    "453.a2a6eef5.chunk.js.map": "/static/js/453.a2a6eef5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8d8ab8fe.css",
+    "static/js/main.d2ef1618.js"
+  ]
+}
