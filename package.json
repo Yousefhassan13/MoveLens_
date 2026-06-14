@@ -2,7 +2,6 @@
   "name": "MoveLens_Project",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://Yousefhassan13.github.io/MoveLens_",
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
