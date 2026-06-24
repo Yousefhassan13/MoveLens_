@@ -1,0 +1,358 @@
+.gardens-container {
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 16px;
+  background-color: #ffffff;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+.gardens-header {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 20px;
+  padding: 10px 0;
+}
+
+.gardens-back-btn {
+  background-color: #e0f2fe;
+  color: #0284c7;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+  flex-shrink: 0;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.gardens-back-btn:hover {
+  background-color: #bae6fd;
+  transform: translateX(-2px);
+}
+
+.gardens-back-btn:focus-visible {
+  outline: 2px solid #0284c7;
+  outline-offset: 3px;
+}
+
+.gardens-header h1 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.gardens-search-box {
+  display: flex;
+  align-items: center;
+  background-color: #f3f4f6;
+  border-radius: 12px;
+  padding: 12px 16px;
+  gap: 10px;
+  margin-bottom: 20px;
+  border: 2px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.gardens-search-box:focus-within {
+  border-color: #2563eb;
+  background-color: #f0f7ff;
+}
+
+.gardens-search-icon {
+  color: #9ca3af;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.gardens-search-box input {
+  border: none;
+  background: none;
+  width: 100%;
+  outline: none;
+  font-size: 15px;
+  color: #374151;
+  font-family: "Poppins", sans-serif;
+}
+
+.gardens-clear-btn {
+  background: none;
+  border: none;
+  color: #9ca3af;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.gardens-clear-btn:hover {
+  color: #374151;
+  background-color: #e5e7eb;
+}
+
+.gardens-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.gardens-tab-btn {
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  background-color: #f3f4f6;
+  color: #6b7280;
+  transition: all 0.2s;
+  font-family: "Poppins", sans-serif;
+}
+
+.gardens-tab-btn:hover {
+  background-color: #e5e7eb;
+}
+
+.gardens-tab-btn.active {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.gardens-tab-btn:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 3px;
+}
+
+.gardens-no-results {
+  text-align: center;
+  padding: 60px 20px;
+  color: #6b7280;
+}
+
+.gardens-no-results p {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.gardens-no-results strong {
+  color: #111827;
+}
+
+.gardens-no-results button {
+  background: none;
+  border: none;
+  color: #2563eb;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  font-family: "Poppins", sans-serif;
+}
+
+.gardens-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.gardens-card {
+  display: flex;
+  background-color: #ffffff;
+  padding: 12px;
+  border-radius: 16px;
+  border: 1px solid #f3f4f6;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.gardens-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.gardens-img-wrapper {
+  position: relative;
+  width: 35%;
+  min-width: 110px;
+  max-width: 140px;
+  aspect-ratio: 1 / 1;
+}
+
+.gardens-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.gardens-fav-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  padding: 6px;
+  border-radius: 50px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s ease;
+}
+
+.gardens-fav-btn svg {
+  width: 16px;
+  height: 16px;
+  color: #d1d5db;
+  fill: #d1d5db;
+  transition: color 0.2s ease, fill 0.2s ease;
+}
+
+.gardens-fav-btn.active svg {
+  color: #ef4444;
+  fill: #ef4444;
+}
+
+.gardens-fav-btn:hover {
+  transform: scale(1.1);
+}
+
+.gardens-fav-btn:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.gardens-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 16px;
+  flex: 1;
+}
+
+.gardens-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.gardens-discount {
+  background-color: #eff6ff;
+  color: #2563eb;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.gardens-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.gardens-rating svg {
+  width: 14px;
+  height: 14px;
+  fill: #fbbf24;
+  color: #fbbf24;
+}
+
+.gardens-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 4px 0;
+}
+
+.gardens-location {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #9ca3af;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.gardens-location svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.gardens-bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gardens-price {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #2563eb;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.gardens-price svg {
+  font-size: 16px;
+}
+
+.gardens-action-btn {
+  background-color: #e0f2fe;
+  color: #0284c7;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.gardens-action-btn:hover {
+  background-color: #bae6fd;
+  transform: translateX(2px);
+}
+
+.gardens-action-btn:focus-visible {
+  outline: 2px solid #0284c7;
+  outline-offset: 2px;
+}
+
+@media (min-width: 768px) {
+  .gardens-container {
+    max-width: 1100px;
+  }
+  .gardens-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}

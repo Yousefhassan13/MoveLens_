@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./RestaurantList.css";
+import { useNavigate } from 'react-router-dom';
 
 
 import abuTarekImg from "./assets/Koshary.jpg";
@@ -49,6 +50,8 @@ const restaurantsData = [
 
 export default function RestaurantList() {
 
+  const navigate = useNavigate();
+
   const [favorites, setFavorites] = useState({});
 
   const toggleFavorite = (id) => {
@@ -57,7 +60,7 @@ export default function RestaurantList() {
 
   const handleViewAll = () => {
   
-    console.log("View all restaurants clicked");
+    navigate("/popular-restaurants");
   };
 
   return (

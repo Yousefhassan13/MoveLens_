@@ -1,5 +1,6 @@
 import React from "react";
 import "./ExploreByMood.css";
+import { useNavigate } from "react-router-dom"; // 1. استيراد أداة التوجيه
 
 import youthfulBg from "./assets/youthful-bg.png";
 import familyBg from "./assets/family-bg.png";
@@ -11,16 +12,21 @@ import familyIcon from "./assets/family-icon.png";
 import religiousIcon from "./assets/religious-icon.png";
 import romanticIcon from "./assets/romantic-icon.png";
 
+// 2. إضافة حقل path المخصص لكل بطاقة
 const moodData = [
-  { id: 1, name: "Youthful", bg: youthfulBg, icon: youthfulIcon },
-  { id: 2, name: "Family", bg: familyBg, icon: familyIcon },
-  { id: 3, name: "Religious", bg: religiousBg, icon: religiousIcon },
-  { id: 4, name: "Romantic", bg: romanticBg, icon: romanticIcon },
+  { id: 1, name: "Youthful", bg: youthfulBg, icon: youthfulIcon, path: "/youthful" },
+  { id: 2, name: "Family", bg: familyBg, icon: familyIcon, path: "/family" },
+  { id: 3, name: "Religious", bg: religiousBg, icon: religiousIcon, path: "/religious-mood" },
+  { id: 4, name: "Romantic", bg: romanticBg, icon: romanticIcon, path: "/romantic" },
 ];
 
 export default function ExploreByMood() {
-  const handleMoodClick = (moodName) => {
-    console.log(`Exploring mood: ${moodName}`);
+  const navigate = useNavigate(); // 3. تفعيل التوجيه
+
+  const handleMoodClick = (path) => {
+    if (path) {
+      navigate(path); // 4. الانتقال إلى المسار عند الضغط
+    }
   };
 
   return (
@@ -32,8 +38,8 @@ export default function ExploreByMood() {
           <div
             key={mood.id}
             className="mood-card"
-            onClick={() => handleMoodClick(mood.name)}
-            onKeyDown={(e) => e.key === "Enter" && handleMoodClick(mood.name)}
+            onClick={() => handleMoodClick(mood.path)} // تعديل هنا لتمرير الـ path
+            onKeyDown={(e) => e.key === "Enter" && handleMoodClick(mood.path)}
             role="button"
             tabIndex={0}
             aria-label={`Explore ${mood.name} places`}

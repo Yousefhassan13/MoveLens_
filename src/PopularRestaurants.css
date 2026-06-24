@@ -1,0 +1,357 @@
+.popular-restaurants-container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 16px;
+  background-color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* ── Header ── */
+.pr-header {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 20px;
+  padding: 10px 0;
+}
+
+.pr-back-btn {
+  background: #e0f2fe;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0284c7;
+  font-size: 20px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.pr-back-btn:hover {
+  background-color: #bae6fd;
+  transform: translateX(-2px);
+}
+
+.pr-back-btn:focus-visible {
+  outline: 2px solid #0284c7;
+  outline-offset: 3px;
+}
+
+.pr-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+/* ── Search ── */
+.pr-search-box {
+  display: flex;
+  align-items: center;
+  background-color: #f3f4f6;
+  border-radius: 12px;
+  padding: 12px 16px;
+  gap: 10px;
+  margin-bottom: 16px;
+  border: 2px solid transparent;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.pr-search-box:focus-within {
+  border-color: #2563eb;
+  background-color: #f0f7ff;
+}
+
+.pr-search-icon {
+  color: #9ca3af;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.pr-search-box input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  font-size: 15px;
+  color: #374151;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+}
+
+.pr-search-box input::placeholder {
+  color: #9ca3af;
+}
+
+.pr-clear-btn {
+  background: none;
+  border: none;
+  color: #9ca3af;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.pr-clear-btn:hover {
+  color: #374151;
+  background-color: #e5e7eb;
+}
+
+/* ── Tabs ── */
+.pr-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  scrollbar-width: none;
+}
+
+.pr-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.pr-tab-btn {
+  padding: 9px 18px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  background-color: #f3f4f6;
+  color: #6b7280;
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: "Poppins", sans-serif;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.pr-tab-btn:hover {
+  background-color: #e5e7eb;
+}
+
+.pr-tab-btn.active {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.pr-tab-btn:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 3px;
+}
+
+/* ── No Results ── */
+.pr-no-results {
+  text-align: center;
+  padding: 60px 20px;
+  color: #6b7280;
+}
+
+.pr-no-results p {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.pr-no-results strong {
+  color: #111827;
+}
+
+.pr-no-results button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  transition: background-color 0.2s ease;
+}
+
+.pr-no-results button:hover {
+  background-color: #1d4ed8;
+}
+
+/* ── Cards List ── */
+.pr-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ── Card ── */
+.pr-card {
+  display: flex;
+  background: #ffffff;
+  border: 1px solid #f3f4f6;
+  border-radius: 16px;
+  padding: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.pr-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* ── Image ── */
+.pr-img-wrapper {
+  position: relative;
+  width: 110px;
+  height: 100px;
+  flex-shrink: 0;
+}
+
+.pr-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.pr-card:hover .pr-card-img {
+  transform: scale(1.03);
+}
+
+/* ── Favorite Button ── */
+.pr-fav-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  font-size: 13px;
+  color: #d1d5db;
+  transition: transform 0.2s ease, color 0.2s ease, background-color 0.2s;
+}
+
+.pr-fav-btn:hover {
+  transform: scale(1.15);
+  background: #fff;
+}
+
+.pr-fav-btn:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+/* ✅ تصحيح: القلب يتحول أحمر لما active */
+.pr-fav-btn.active {
+  color: #ef4444;
+}
+
+/* ── Card Info ── */
+.pr-info {
+  flex: 1;
+  padding-left: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+}
+
+.pr-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.pr-discount {
+  background-color: #eff6ff;
+  color: #2563eb;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.pr-rating {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.pr-rating svg {
+  color: #fbbf24;
+  fill: #fbbf24;
+  font-size: 14px;
+}
+
+.pr-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 4px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pr-location {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #9ca3af;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.pr-location svg {
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.pr-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+}
+
+.pr-status-open {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.pr-status-label {
+  color: #9ca3af;
+}
+
+/* ── Responsive ── */
+@media (min-width: 768px) {
+  .popular-restaurants-container {
+    max-width: 1100px;
+  }
+
+  .pr-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
