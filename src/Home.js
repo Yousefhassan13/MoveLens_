@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import "./Home.css";
 import pyramidsImg from "./assets/pyramids.jpg";
 import logo from "./assets/logo.png";
@@ -11,18 +11,25 @@ import { HiAdjustmentsHorizontal } from "react-icons/hi2";
 import { FaArrowRight } from "react-icons/fa6";
 import { useState } from "react";
 
-const CATEGORIES = ["All", "Museums", "Gardens", "Religious", "Corniche", "Shopping"];
-const DISTANCES  = ["Any", "< 1 km", "< 3 km", "< 5 km", "< 10 km"];
-const RATINGS    = ["Any", "3+", "4+", "4.5+"];
+const CATEGORIES = [
+  "All",
+  "Museums",
+  "Gardens",
+  "Religious",
+  "Corniche",
+  "Shopping",
+];
+const DISTANCES = ["Any", "< 1 km", "< 3 km", "< 5 km", "< 10 km"];
+const RATINGS = ["Any", "3+", "4+", "4.5+"];
 
 export default function Home() {
   const navigate = useNavigate();
 
-  const [query, setQuery]               = useState("");
-  const [filterOpen, setFilterOpen]     = useState(false);
+  const [query, setQuery] = useState("");
+  const [filterOpen, setFilterOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState("All");
   const [activeDistance, setActiveDistance] = useState("Any");
-  const [activeRating, setActiveRating]     = useState("Any");
+  const [activeRating, setActiveRating] = useState("Any");
 
   const hasActiveFilters =
     activeCategory !== "All" ||
@@ -54,13 +61,17 @@ export default function Home() {
       <header className="header">
         <div>
           <div className="logo-container">
-            <img src={logo} alt="Egypt Travel Guide Logo" className="logo-img" />
+            <img
+              src={logo}
+              alt="Egypt Travel Guide Logo"
+              className="logo-img"
+            />
           </div>
           <p className="subtitle">Your smart guide in Egypt</p>
         </div>
         <button
           className="notification"
-          onClick={() => console.log("Notifications clicked")}
+          onClick={() => navigate("/notifications")} 
           aria-label="Open notifications"
         >
           <IoNotificationsOutline />
@@ -78,7 +89,7 @@ export default function Home() {
             onChange={(e) => setQuery(e.target.value)}
             aria-label="Search for places"
           />
-          {/* زر مسح البحث يظهر لما في نص */}
+        
           {query && (
             <button
               type="button"
@@ -91,7 +102,7 @@ export default function Home() {
           )}
         </div>
 
-        {/* زر الفلتر مع badge لو في فلاتر مفعلة */}
+        
         <button
           className={`filter-btn ${hasActiveFilters ? "filter-btn--active" : ""}`}
           type="button"
@@ -110,7 +121,7 @@ export default function Home() {
       <div className="hero-card">
         <img src={pyramidsImg} alt="The Pyramids of Giza at sunset" />
         <div className="overlay">
-          <button className="explore-btn" onClick={() => navigate('/explore')}>
+          <button className="explore-btn" onClick={() => navigate("/explore")}>
             Explore Now
             <FaArrowRight className="arrow" aria-hidden="true" />
           </button>
@@ -131,7 +142,11 @@ export default function Home() {
       )}
 
       {/* Filter Drawer */}
-      <div className={`filter-drawer ${filterOpen ? "open" : ""}`} role="dialog" aria-label="Filter options">
+      <div
+        className={`filter-drawer ${filterOpen ? "open" : ""}`}
+        role="dialog"
+        aria-label="Filter options"
+      >
         <div className="filter-drawer-header">
           <h2>Filters</h2>
           <button
@@ -193,16 +208,10 @@ export default function Home() {
 
         {/* Actions */}
         <div className="filter-actions">
-          <button
-            className="filter-reset-btn"
-            onClick={handleResetFilters}
-          >
+          <button className="filter-reset-btn" onClick={handleResetFilters}>
             Reset
           </button>
-          <button
-            className="filter-apply-btn"
-            onClick={handleApplyFilters}
-          >
+          <button className="filter-apply-btn" onClick={handleApplyFilters}>
             Apply Filters
           </button>
         </div>

@@ -8,7 +8,6 @@ import { FaRegHeart, FaHeart } from "react-icons/fa";
 import { HiMapPin } from "react-icons/hi2";
 import { AiFillStar } from "react-icons/ai";
 
-// ✅ تصحيح: نفس الصور بنفس المطاعم زي RestaurantList
 import abuTarekImg  from "./assets/Koshary.jpg";
 import elHatyImg    from "./assets/ElHaty.jpg";
 import gadImg       from "./assets/King Burger.png";
@@ -33,8 +32,7 @@ export default function PopularRestaurants() {
     setFavorites((prev) => ({ ...prev, [id]: !prev[id] }));
   };
 
-  // ✅ فلترة حقيقية بالـ tab والـ search
-  const filtered = useMemo(() => {
+    const filtered = useMemo(() => {
     let result = activeTab === "All"
       ? restaurantsData
       : restaurantsData.filter((item) => item.tag === activeTab);
@@ -63,8 +61,7 @@ export default function PopularRestaurants() {
         <h1 className="pr-title">Popular Restaurants</h1>
       </header>
 
-      {/* ✅ Search متربط بـ state */}
-      <div className="pr-search-box" role="search">
+            <div className="pr-search-box" role="search">
         <FiSearch className="pr-search-icon" aria-hidden="true" />
         <input
           type="text"
@@ -84,7 +81,7 @@ export default function PopularRestaurants() {
         )}
       </div>
 
-      {/* ✅ Tabs بتفلتر فعلاً */}
+      
       <div className="pr-tabs" role="tablist">
         {TABS.map((tab) => (
           <button
@@ -116,7 +113,7 @@ export default function PopularRestaurants() {
                   alt={`${restaurant.name} restaurant`}
                   className="pr-card-img"
                 />
-                {/* ✅ زر المفضلة: أحمر لما active، رمادي لما مش active */}
+                
                 <button
                   className={`pr-fav-btn ${favorites[restaurant.id] ? "active" : ""}`}
                   onClick={() => toggleFavorite(restaurant.id)}

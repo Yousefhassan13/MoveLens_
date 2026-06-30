@@ -110,7 +110,6 @@ body {
   color: #9ca3af;
 }
 
-/* ✅ زر مسح البحث */
 .search-clear-btn {
   background: none;
   border: none;
@@ -157,7 +156,6 @@ body {
   outline-offset: 3px;
 }
 
-/* ✅ Badge لما في فلاتر مفعلة */
 .filter-btn--active {
   background: #1565c0;
 }

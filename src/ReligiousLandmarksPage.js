@@ -11,16 +11,86 @@ import mosqueImg2 from "./assets/Religious Sites/mosque2.jpg";
 import mosqueImg3 from "./assets/Religious Sites/mosque3.jpg";
 import mosqueImg4 from "./assets/Religious Sites/mosque4.jpg";
 
-// ✅ تصحيح: حذف الـ imports المكررة (5-8 كانوا نفس الصور 1-4)
 const religiousData = [
-  { id: 1, name: "Al-Azhar Mosque",       location: "Islamic Cairo",  rating: "4.9", discount: "Free",    price: "Free",    image: mosqueImg1, tag: "Most Visited" },
-  { id: 2, name: "Muhammad Ali Mosque",   location: "Cairo Citadel",  rating: "4.8", discount: "10% Off", price: "200 EGP", image: mosqueImg2, tag: "Recommended" },
-  { id: 3, name: "Sultan Hassan Mosque",  location: "Islamic Cairo",  rating: "4.7", discount: "10% Off", price: "180 EGP", image: mosqueImg3, tag: "Recommended" },
-  { id: 4, name: "Amr Ibn Al-As Mosque",  location: "Old Cairo",      rating: "4.5", discount: "Free",    price: "Free",    image: mosqueImg4, tag: "Most Visited" },
-  { id: 5, name: "Al-Rifa'i Mosque",      location: "Cairo Citadel",  rating: "4.6", discount: "10% Off", price: "150 EGP", image: mosqueImg1, tag: "Recommended" },
-  { id: 6, name: "Hanging Church",        location: "Old Cairo",      rating: "4.7", discount: "Free",    price: "Free",    image: mosqueImg2, tag: "Most Visited" },
-  { id: 7, name: "Saint Catherine's",     location: "South Sinai",    rating: "4.8", discount: "15% Off", price: "250 EGP", image: mosqueImg3, tag: "Recommended" },
-  { id: 8, name: "Ben Ezra Synagogue",    location: "Old Cairo",      rating: "4.4", discount: "Free",    price: "Free",    image: mosqueImg4, tag: "" },
+  {
+    id: 1,
+    name: "Al-Azhar Mosque",
+    location: "Islamic Cairo",
+    rating: "4.9",
+    discount: "Free",
+    price: "Free",
+    image: mosqueImg1,
+    tag: "Most Visited",
+  },
+  {
+    id: 2,
+    name: "Muhammad Ali Mosque",
+    location: "Cairo Citadel",
+    rating: "4.8",
+    discount: "10% Off",
+    price: "200 EGP",
+    image: mosqueImg2,
+    tag: "Recommended",
+  },
+  {
+    id: 3,
+    name: "Sultan Hassan Mosque",
+    location: "Islamic Cairo",
+    rating: "4.7",
+    discount: "10% Off",
+    price: "180 EGP",
+    image: mosqueImg3,
+    tag: "Recommended",
+  },
+  {
+    id: 4,
+    name: "Amr Ibn Al-As Mosque",
+    location: "Old Cairo",
+    rating: "4.5",
+    discount: "Free",
+    price: "Free",
+    image: mosqueImg4,
+    tag: "Most Visited",
+  },
+  {
+    id: 5,
+    name: "Al-Rifa'i Mosque",
+    location: "Cairo Citadel",
+    rating: "4.6",
+    discount: "10% Off",
+    price: "150 EGP",
+    image: mosqueImg1,
+    tag: "Recommended",
+  },
+  {
+    id: 6,
+    name: "Hanging Church",
+    location: "Old Cairo",
+    rating: "4.7",
+    discount: "Free",
+    price: "Free",
+    image: mosqueImg2,
+    tag: "Most Visited",
+  },
+  {
+    id: 7,
+    name: "Saint Catherine's",
+    location: "South Sinai",
+    rating: "4.8",
+    discount: "15% Off",
+    price: "250 EGP",
+    image: mosqueImg3,
+    tag: "Recommended",
+  },
+  {
+    id: 8,
+    name: "Ben Ezra Synagogue",
+    location: "Old Cairo",
+    rating: "4.4",
+    discount: "Free",
+    price: "Free",
+    image: mosqueImg4,
+    tag: "Most Visited",   },
 ];
 
 const TABS = ["All", "Recommended", "Most Visited"];
@@ -28,25 +98,25 @@ const TABS = ["All", "Recommended", "Most Visited"];
 export default function ReligiousLandmarksPage() {
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState("All");
-  const [query, setQuery]         = useState("");
+  const [query, setQuery] = useState("");
   const [favorites, setFavorites] = useState({});
 
   const toggleFavorite = (id) => {
     setFavorites((prev) => ({ ...prev, [id]: !prev[id] }));
   };
 
-  // ✅ فلترة حقيقية بالـ tab والـ search
-  const filtered = useMemo(() => {
-    let result = activeTab === "All"
-      ? religiousData
-      : religiousData.filter((item) => item.tag === activeTab);
+   const filtered = useMemo(() => {
+    let result =
+      activeTab === "All"
+        ? religiousData
+        : religiousData.filter((item) => item.tag === activeTab);
 
     const q = query.trim().toLowerCase();
     if (q) {
       result = result.filter(
         (item) =>
           item.name.toLowerCase().includes(q) ||
-          item.location.toLowerCase().includes(q)
+          item.location.toLowerCase().includes(q),
       );
     }
     return result;
@@ -65,8 +135,7 @@ export default function ReligiousLandmarksPage() {
         <h1>Religious Sites</h1>
       </header>
 
-      {/* ✅ Search متربط بـ state */}
-      <div className="religious-search-box" role="search">
+            <div className="religious-search-box" role="search">
         <FiSearch className="religious-search-icon" aria-hidden="true" />
         <input
           type="text"
@@ -86,8 +155,7 @@ export default function ReligiousLandmarksPage() {
         )}
       </div>
 
-      {/* ✅ Tabs بتفلتر فعلاً */}
-      <div className="religious-tabs" role="tablist">
+            <div className="religious-tabs" role="tablist">
         {TABS.map((tab) => (
           <button
             key={tab}
@@ -103,8 +171,15 @@ export default function ReligiousLandmarksPage() {
 
       {filtered.length === 0 ? (
         <div className="religious-no-results">
-          <p>No results for "<strong>{query}</strong>"</p>
-          <button onClick={() => { setQuery(""); setActiveTab("All"); }}>
+          <p>
+            No results for "<strong>{query}</strong>"
+          </p>
+          <button
+            onClick={() => {
+              setQuery("");
+              setActiveTab("All");
+            }}
+          >
             Clear filters
           </button>
         </div>
@@ -113,12 +188,19 @@ export default function ReligiousLandmarksPage() {
           {filtered.map((mosque) => (
             <div key={mosque.id} className="religious-card">
               <div className="religious-img-wrapper">
-                <img src={mosque.image} alt={mosque.name} className="religious-card-img" />
-                {/* ✅ زر المفضلة متفاعل */}
-                <button
+                <img
+                  src={mosque.image}
+                  alt={mosque.name}
+                  className="religious-card-img"
+                />
+                                <button
                   className={`religious-fav-btn ${favorites[mosque.id] ? "active" : ""}`}
                   onClick={() => toggleFavorite(mosque.id)}
-                  aria-label={favorites[mosque.id] ? `Remove ${mosque.name} from favorites` : `Save ${mosque.name} to favorites`}
+                  aria-label={
+                    favorites[mosque.id]
+                      ? `Remove ${mosque.name} from favorites`
+                      : `Save ${mosque.name} to favorites`
+                  }
                 >
                   <FaHeart />
                 </button>
@@ -127,8 +209,13 @@ export default function ReligiousLandmarksPage() {
               <div className="religious-details">
                 <div>
                   <div className="religious-top-row">
-                    <span className="religious-discount">{mosque.discount}</span>
-                    <div className="religious-rating" aria-label={`Rated ${mosque.rating} out of 5`}>
+                    <span className="religious-discount">
+                      {mosque.discount}
+                    </span>
+                    <div
+                      className="religious-rating"
+                      aria-label={`Rated ${mosque.rating} out of 5`}
+                    >
                       <FaStar aria-hidden="true" />
                       {mosque.rating}
                     </div>
@@ -148,7 +235,11 @@ export default function ReligiousLandmarksPage() {
                   <button
                     className="religious-action-btn"
                     aria-label={`View details for ${mosque.name}`}
-                    onClick={() => console.log("View:", mosque.name)}
+                    onClick={() =>
+                      navigate("/religious-details", {
+                        state: { place: mosque },
+                      })
+                    }
                   >
                     <FiChevronRight />
                   </button>

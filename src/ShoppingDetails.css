@@ -1,0 +1,379 @@
+.shopping-details-container {
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 16px;
+  background-color: #ffffff;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+
+.shopping-details-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.shopping-media-section {
+  width: 100%;
+}
+
+.shopping-main-hero {
+  position: relative;
+  width: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.shopping-hero-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.shopping-floating-back {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #0284c7;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.shopping-floating-back:hover {
+  transform: scale(1.05);
+  background-color: #ffffff;
+}
+
+
+.shopping-thumbs-list {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+}
+
+.shopping-thumb-card {
+  width: 75px;
+  height: 55px;
+  border-radius: 10px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.shopping-thumb-card:hover {
+  transform: translateY(-2px);
+}
+
+.shopping-thumb-card.active {
+  border-color: #2563eb;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.3);
+}
+
+
+.shopping-content-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.shopping-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.shopping-main-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.shopping-main-price {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2563eb;
+  white-space: nowrap;
+}
+
+.shopping-sub-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.shopping-tag-badge {
+  background-color: #eff6ff;
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 8px;
+}
+
+.shopping-rating-info {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.shopping-rating-info svg {
+  color: #fbbf24;
+  fill: #fbbf24;
+}
+
+.shopping-rating-info strong {
+  color: #111827;
+}
+
+
+.shopping-internal-nav {
+  display: flex;
+  border-bottom: 2px solid #f3f4f6;
+  margin-bottom: 16px;
+}
+
+.shopping-nav-item {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 12px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #9ca3af;
+  cursor: pointer;
+  text-align: center;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+
+.shopping-nav-item.active {
+  color: #2563eb;
+  border-bottom-color: #2563eb;
+}
+
+
+.shopping-features-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.shopping-feature-card {
+  flex: 1;
+  background-color: #2563eb;
+  color: #ffffff;
+  padding: 14px;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.15);
+}
+
+.shopping-feature-card svg {
+  font-size: 22px;
+}
+
+
+.shopping-desc-para {
+  font-size: 14px;
+  color: #4b5563;
+  line-height: 1.6;
+  margin: 0 0 20px 0;
+}
+
+
+.shopping-facilities-block h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 12px 0;
+}
+
+.shopping-facilities-layout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.shopping-facility-cell {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+.shopping-facility-cell svg {
+  font-size: 15px;
+  color: #6b7280;
+}
+
+.shopping-facility-cell span {
+  color: #4b5563;
+}
+
+
+.shopping-actions-block {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+}
+
+.shopping-how-to-go-btn {
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.2s, transform 0.1s;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+  width: 100%;
+}
+
+.shopping-how-to-go-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.shopping-how-to-go-btn:active {
+  transform: scale(0.98);
+}
+
+
+@media (min-width: 768px) {
+  .shopping-details-container {
+    max-width: 1050px;
+    padding: 32px;
+  }
+
+  .shopping-details-layout {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 40px;
+    align-items: start;
+  }
+
+  .shopping-hero-img {
+    aspect-ratio: 16 / 11;
+  }
+
+  .shopping-main-title {
+    font-size: 26px;
+  }
+
+  .shopping-desc-para {
+    font-size: 15px;
+  }
+}
+
+
+.shopping-hero-img {
+  transition: transform 0.4s ease;
+}
+.shopping-main-hero:hover .shopping-hero-img {
+  transform: scale(1.02);
+}
+
+
+.shopping-photos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 24px;
+}
+.shopping-photo-grid-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s;
+}
+.shopping-photo-grid-img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+
+.shopping-reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.shopping-review-card {
+  background-color: #f9fafb;
+  border-radius: 14px;
+  padding: 14px;
+  border: 1px solid #f3f4f6;
+}
+.shopping-review-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.shopping-review-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #7c3aed;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.shopping-review-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+}
+.shopping-review-stars {
+  display: flex;
+  gap: 2px;
+  color: #fbbf24;
+  font-size: 12px;
+  margin-top: 2px;
+}
+.shopping-review-comment {
+  font-size: 13px;
+  color: #4b5563;
+  line-height: 1.5;
+  margin: 0;
+}

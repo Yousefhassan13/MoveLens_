@@ -1,6 +1,7 @@
 import "./App.css";
 import "./Home.css";
 import Home from "./Home";
+import Notifications from "./Notifications";
 import ExplorePlaces from "./ExplorePlaces";
 import HistoricalMuseum from "./HistoricalMuseum";
 import GreenGardens from "./GreenGardens";
@@ -11,7 +12,12 @@ import YouthfulPlaces from "./YouthfulPlaces";
 import RomanticPlaces from "./RomanticPlaces";
 import FamilyPlaces from "./FamilyPlaces";
 import ReligiousPlaces from "./ReligiousPlaces";
-import PopularRestaurants from "./PopularRestaurants"
+import PopularRestaurants from "./PopularRestaurants";
+import MuseumDetails from "./MuseumDetails";
+import ReligiousDetails from "./ReligiousDetails";
+import CornicheDetails from "./CornicheDetails";
+import ShoppingDetails from "./ShoppingDetails";
+import GardenDetails from "./GardenDetails";
 
 // import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -21,6 +27,8 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
+
+          <Route path="/notifications" element={<Notifications />} />
 
           <Route path="/explore" element={<ExplorePlaces />} />
 
@@ -44,6 +52,15 @@ function App() {
 
           <Route path="/popular-restaurants" element={<PopularRestaurants />} />
 
+          <Route path="/museum-details" element={<MuseumDetails />} />
+
+          <Route path="/religious-details" element={<ReligiousDetails />} />
+
+          <Route path="/corniche-details" element={<CornicheDetails />} />
+
+          <Route path="/shopping-details" element={<ShoppingDetails />} />
+
+          <Route path="/garden-details" element={<GardenDetails />} />
         </Routes>
       </Router>
     </div>

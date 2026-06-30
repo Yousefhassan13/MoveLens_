@@ -89,6 +89,9 @@ export default function ExplorePlaces() {
     return placesData.filter((p) => p.title.toLowerCase().includes(q));
   }, [query]);
 
+
+  
+
   return (
     <div className="explore-container">
       <header className="explore-header">
