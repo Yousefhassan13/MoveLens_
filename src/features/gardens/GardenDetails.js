@@ -6,16 +6,16 @@ import { FiChevronLeft, FiWifi } from 'react-icons/fi';
 import { FaStar, FaCar, FaTree, FaUtensils, FaBath, FaHiking, FaBuilding, FaCompass, FaPaw, FaChild } from 'react-icons/fa';
 import { IoEyeSharp } from 'react-icons/io5';
 
-import zooImg1 from './assets/Green Garden/zoo1.jpg';
-import zooImg2 from './assets/Green Garden/zoo2.png';
-import zooImg3 from './assets/Green Garden/zoo3.jpg';
-import zooImg4 from './assets/Green Garden/zoo4.jpg';
-import zooImg5 from './assets/Green Garden/zoo5.jpg';
-import zooImg6 from './assets/Green Garden/zoo6.jpg';
-import zooImg7 from './assets/Green Garden/zoo7.jpg';
-import zooImg8 from './assets/Green Garden/zoo8.jpg';
+import zooImg1 from '../../assets/Green Garden/zoo1.jpg';
+import zooImg2 from '../../assets/Green Garden/zoo2.png';
+import zooImg3 from '../../assets/Green Garden/zoo3.jpg';
+import zooImg4 from '../../assets/Green Garden/zoo4.jpg';
+import zooImg5 from '../../assets/Green Garden/zoo5.jpg';
+import zooImg6 from '../../assets/Green Garden/zoo6.jpg';
+import zooImg7 from '../../assets/Green Garden/zoo7.jpg';
+import zooImg8 from '../../assets/Green Garden/zoo8.jpg';
 
-import defaultZooImg from './assets/Green Garden/zoo1.jpg';
+import defaultZooImg from '../../assets/Green Garden/zoo1.jpg';
 
 
 const gardenGalleries = {

@@ -8,11 +8,11 @@ import { IoTimeOutline } from "react-icons/io5";
 import { IoAccessibilityOutline } from "react-icons/io5";
 import { FaStar } from "react-icons/fa";
 
-import museumImg from "./assets/museum.jpg";
-import gardenImg from "./assets/garden.jpg";
-import religiousImg from "./assets/religious-landmark.jpg";
-import cornicheImg from "./assets/corniche.jpg";
-import shoppingImg from "./assets/shopping-center.png";
+import museumImg from "../../assets/museum.jpg";
+import gardenImg from "../../assets/garden.jpg";
+import religiousImg from "../../assets/religious-landmark.jpg";
+import cornicheImg from "../../assets/corniche.jpg";
+import shoppingImg from "../../assets/shopping-center.png";
 
 const placesData = [
   {

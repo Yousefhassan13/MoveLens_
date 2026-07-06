@@ -1,15 +1,15 @@
 import React from "react";
 import "./ExploreByMood.css";
 import { useNavigate } from "react-router-dom"; 
-import youthfulBg from "./assets/youthful-bg.png";
-import familyBg from "./assets/family-bg.png";
-import religiousBg from "./assets/religious-bg.png";
-import romanticBg from "./assets/romantic-bg.jpg";
+import youthfulBg from "../../assets/youthful-bg.png";
+import familyBg from "../../assets/family-bg.png";
+import religiousBg from "../../assets/religious-bg.png";
+import romanticBg from "../../assets/romantic-bg.jpg";
 
-import youthfulIcon from "./assets/youthful-icon.png";
-import familyIcon from "./assets/family-icon.png";
-import religiousIcon from "./assets/religious-icon.png";
-import romanticIcon from "./assets/romantic-icon.png";
+import youthfulIcon from "../../assets/youthful-icon.png";
+import familyIcon from "../../assets/family-icon.png";
+import religiousIcon from "../../assets/religious-icon.png";
+import romanticIcon from "../../assets/romantic-icon.png";
 
 const moodData = [
   { id: 1, name: "Youthful", bg: youthfulBg, icon: youthfulIcon, path: "/youthful" },

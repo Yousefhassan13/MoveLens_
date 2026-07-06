@@ -1,62 +1,62 @@
 import React, { useState, useMemo } from "react";
-import "./MoodPage.css";
+import '../explore/MoodPage.css';
 import { useNavigate } from "react-router-dom";
 import { FiSearch, FiChevronLeft } from "react-icons/fi";
 import { GoLocation } from "react-icons/go";
 import { IoTimeOutline, IoAccessibilityOutline } from "react-icons/io5";
 import { FaStar } from "react-icons/fa";
 
-import shoppingImg  from "./assets/Shopping Centers/mall3.jpg";
-import religiousImg from "./assets/Pedestrian Paths/corniche4.png";
-import balloonImg   from "./assets/Pedestrian Paths/corniche5.png";
+import barmaImg    from "../../assets/Pedestrian Paths/corniche7.png";
+import gardkaImg   from "../../assets/Historical Musium Places/gem 4.jpg";
+import balloonImg  from "../../assets/Pedestrian Paths/corniche4.png";
 
-const romanticPlacesData = [
+const youthfulPlacesData = [
   {
     id: 1,
-    title: "Shopping Center",
-    image: shoppingImg,
-    rating: "4.6",
+    title: "Barma Hotel",
+    image: barmaImg,
+    rating: "4.5",
     reviews: "2,244",
     distance: "0.5 km Away",
-    availability: "Open Daily 10AM–11PM",
-    visitors: "4,300 Visitors",
+    availability: "Available Daily",
+    visitors: "2,450 Visitors",
     popular: true,
-    path: "/shopping",
+    path: "/gardens",
   },
   {
     id: 2,
-    title: "Religious Landmarks",
-    image: religiousImg,
-    rating: "4.7",
-    reviews: "2,560",
-    distance: "0.8 km Away",
-    availability: "Open Daily",
-    visitors: "3,100 Visitors",
+    title: "ElGardka Sea",
+    image: gardkaImg,
+    rating: "4.3",
+    reviews: "1,870",
+    distance: "1.2 km Away",
+    availability: "Open Daily 8AM–6PM",
+    visitors: "1,900 Visitors",
     popular: true,
-    path: "/religious",
+    path: "/museums",
   },
   {
     id: 3,
     title: "Hot Air Balloon",
     image: balloonImg,
-    rating: "4.8",
+    rating: "4.7",
     reviews: "980",
     distance: "3.0 km Away",
     availability: "Available at Sunrise",
     visitors: "860 Visitors",
     popular: false,
-    path: "/museums",
+    path: "/corniche",
   },
 ];
 
-export default function RomanticPlaces() {
+export default function YouthfulPlaces() {
   const navigate = useNavigate();
   const [query, setQuery] = useState("");
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
-    if (!q) return romanticPlacesData;
-    return romanticPlacesData.filter((p) => p.title.toLowerCase().includes(q));
+    if (!q) return youthfulPlacesData;
+    return youthfulPlacesData.filter((p) => p.title.toLowerCase().includes(q));
   }, [query]);
 
   return (
@@ -69,7 +69,7 @@ export default function RomanticPlaces() {
         >
           <FiChevronLeft />
         </button>
-        <h1>Romantic Places</h1>
+        <h1>Youthful Places</h1>
       </header>
 
       <div className="mood-page-search-box" role="search">

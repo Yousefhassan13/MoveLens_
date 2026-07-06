@@ -7,15 +7,15 @@ import { FiChevronLeft, FiWifi } from 'react-icons/fi';
 import { FaStar, FaUsers, FaCar, FaTree, FaUtensils, FaBath, FaHiking, FaBuilding, FaWater, FaUmbrella } from 'react-icons/fa';
 import { IoEyeSharp } from 'react-icons/io5';
 
-import cornicheImg1 from './assets/Pedestrian Paths/corniche1.png';
-import cornicheImg2 from './assets/Pedestrian Paths/corniche2.jpg';
-import cornicheImg3 from './assets/Pedestrian Paths/corniche3.png';
-import cornicheImg4 from './assets/Pedestrian Paths/corniche4.png';
-import cornicheImg5 from './assets/Pedestrian Paths/corniche5.png';
-import cornicheImg6 from './assets/Pedestrian Paths/corniche6.png';
-import cornicheImg7 from './assets/Pedestrian Paths/corniche7.png';
+import cornicheImg1 from '../../assets/Pedestrian Paths/corniche1.png';
+import cornicheImg2 from '../../assets/Pedestrian Paths/corniche2.jpg';
+import cornicheImg3 from '../../assets/Pedestrian Paths/corniche3.png';
+import cornicheImg4 from '../../assets/Pedestrian Paths/corniche4.png';
+import cornicheImg5 from '../../assets/Pedestrian Paths/corniche5.png';
+import cornicheImg6 from '../../assets/Pedestrian Paths/corniche6.png';
+import cornicheImg7 from '../../assets/Pedestrian Paths/corniche7.png';
 
-import defaultCornicheImg from './assets/Pedestrian Paths/corniche1.png';
+import defaultCornicheImg from '../../assets/Pedestrian Paths/corniche1.png';
 
 
 const cornicheGalleries = {

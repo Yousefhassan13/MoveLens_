@@ -1,9 +1,9 @@
 import { useNavigate } from "react-router-dom";
-import "./Home.css";
-import pyramidsImg from "./assets/pyramids.jpg";
-import logo from "./assets/logo.png";
-import RestaurantList from "./RestaurantList";
-import ExploreByMood from "./ExploreByMood";
+import "../home/Home.css";
+import pyramidsImg from "../../assets/pyramids.jpg";
+import logo from "../../assets/logo.png";
+import RestaurantList from "../restaurants/RestaurantList";
+import ExploreByMood from "../explore/ExploreByMood";
 
 import { FiSearch, FiX } from "react-icons/fi";
 import { IoNotificationsOutline } from "react-icons/io5";

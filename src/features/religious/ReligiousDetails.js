@@ -7,12 +7,12 @@ import { FiChevronLeft, FiWifi } from 'react-icons/fi';
 import { FaStar, FaUsers, FaCar, FaTree, FaUtensils, FaBath, FaBookOpen, FaMosque, FaCross, FaLandmark } from 'react-icons/fa';
 import { IoEyeSharp } from 'react-icons/io5';
 
-import mosqueImg1 from './assets/Religious Sites/mosque1.jpg';
-import mosqueImg2 from './assets/Religious Sites/mosque2.jpg';
-import mosqueImg3 from './assets/Religious Sites/mosque3.jpg';
-import mosqueImg4 from './assets/Religious Sites/mosque4.jpg';
+import mosqueImg1 from '../../assets/Religious Sites/mosque1.jpg';
+import mosqueImg2 from '../../assets/Religious Sites/mosque2.jpg';
+import mosqueImg3 from '../../assets/Religious Sites/mosque3.jpg';
+import mosqueImg4 from '../../assets/Religious Sites/mosque4.jpg';
 
-import defaultMosqueImg from './assets/Religious Sites/mosque1.jpg';
+import defaultMosqueImg from '../../assets/Religious Sites/mosque1.jpg';
 
 
 const religiousGalleries = {

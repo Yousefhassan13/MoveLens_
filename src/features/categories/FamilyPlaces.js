@@ -1,62 +1,62 @@
 import React, { useState, useMemo } from "react";
-import "./MoodPage.css";
+import '../explore/MoodPage.css';
 import { useNavigate } from "react-router-dom";
 import { FiSearch, FiChevronLeft } from "react-icons/fi";
 import { GoLocation } from "react-icons/go";
 import { IoTimeOutline, IoAccessibilityOutline } from "react-icons/io5";
 import { FaStar } from "react-icons/fa";
 
-import barmaImg    from "./assets/Pedestrian Paths/corniche7.png";
-import gardkaImg   from "./assets/Historical Musium Places/gem 4.jpg";
-import balloonImg  from "./assets/Pedestrian Paths/corniche4.png";
+import amusementImg from "../../assets/Shopping Centers/mall1.jpg";
+import fishGardenImg from "../../assets/Historical Musium Places/gem 5.jpg";
+import pyramidsImg   from "../../assets/Green Garden/zoo3.jpg";
 
-const youthfulPlacesData = [
+const familyPlacesData = [
   {
     id: 1,
-    title: "Barma Hotel",
-    image: barmaImg,
+    title: "Amusement Parks",
+    image: amusementImg,
     rating: "4.5",
     reviews: "2,244",
     distance: "0.5 km Away",
-    availability: "Available Daily",
+    availability: "Open Daily 10AM–10PM",
     visitors: "2,450 Visitors",
     popular: true,
-    path: "/gardens",
+    path: "/shopping",
   },
   {
     id: 2,
-    title: "ElGardka Sea",
-    image: gardkaImg,
+    title: "Fish Gardens",
+    image: fishGardenImg,
     rating: "4.3",
-    reviews: "1,870",
-    distance: "1.2 km Away",
-    availability: "Open Daily 8AM–6PM",
-    visitors: "1,900 Visitors",
+    reviews: "1,560",
+    distance: "1.1 km Away",
+    availability: "Open Daily 9AM–5PM",
+    visitors: "1,800 Visitors",
     popular: true,
     path: "/museums",
   },
   {
     id: 3,
-    title: "Hot Air Balloon",
-    image: balloonImg,
-    rating: "4.7",
-    reviews: "980",
-    distance: "3.0 km Away",
-    availability: "Available at Sunrise",
-    visitors: "860 Visitors",
-    popular: false,
-    path: "/corniche",
+    title: "Pyramids",
+    image: pyramidsImg,
+    rating: "4.9",
+    reviews: "8,100",
+    distance: "2.5 km Away",
+    availability: "Open Daily 8AM–5PM",
+    visitors: "9,500 Visitors",
+    popular: true,
+    path: "/gardens",
   },
 ];
 
-export default function YouthfulPlaces() {
+export default function FamilyPlaces() {
   const navigate = useNavigate();
   const [query, setQuery] = useState("");
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
-    if (!q) return youthfulPlacesData;
-    return youthfulPlacesData.filter((p) => p.title.toLowerCase().includes(q));
+    if (!q) return familyPlacesData;
+    return familyPlacesData.filter((p) => p.title.toLowerCase().includes(q));
   }, [query]);
 
   return (
@@ -69,7 +69,7 @@ export default function YouthfulPlaces() {
         >
           <FiChevronLeft />
         </button>
-        <h1>Youthful Places</h1>
+        <h1>Family Places</h1>
       </header>
 
       <div className="mood-page-search-box" role="search">

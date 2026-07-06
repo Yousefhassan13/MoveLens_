@@ -6,10 +6,10 @@ import { GoLocation } from "react-icons/go";
 import { FaStar, FaHeart } from "react-icons/fa";
 import { HiOutlineTicket } from "react-icons/hi2";
 
-import mosqueImg1 from "./assets/Religious Sites/mosque1.jpg";
-import mosqueImg2 from "./assets/Religious Sites/mosque2.jpg";
-import mosqueImg3 from "./assets/Religious Sites/mosque3.jpg";
-import mosqueImg4 from "./assets/Religious Sites/mosque4.jpg";
+import mosqueImg1 from "../../assets/Religious Sites/mosque1.jpg";
+import mosqueImg2 from "../../assets/Religious Sites/mosque2.jpg";
+import mosqueImg3 from "../../assets/Religious Sites/mosque3.jpg";
+import mosqueImg4 from "../../assets/Religious Sites/mosque4.jpg";
 
 const religiousData = [
   {

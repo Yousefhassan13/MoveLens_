@@ -6,14 +6,14 @@ import { GoLocation } from "react-icons/go";
 import { FaStar, FaHeart } from "react-icons/fa";
 import { HiOutlineTicket } from "react-icons/hi2";
 
-import mallImg1 from "./assets/Shopping Centers/mall1.jpg";
-import mallImg2 from "./assets/Shopping Centers/mall2.jpg";
-import mallImg3 from "./assets/Shopping Centers/mall3.jpg";
-import mallImg4 from "./assets/Shopping Centers/mall4.jpg";
-import mallImg5 from "./assets/Shopping Centers/mall5.jpg";
-import mallImg6 from "./assets/Shopping Centers/mall6.jpg";
-import mallImg7 from "./assets/Shopping Centers/mall7.jpg";
-import mallImg8 from "./assets/Shopping Centers/mall8.jpg";
+import mallImg1 from "../../assets/Shopping Centers/mall1.jpg";
+import mallImg2 from "../../assets/Shopping Centers/mall2.jpg";
+import mallImg3 from "../../assets/Shopping Centers/mall3.jpg";
+import mallImg4 from "../../assets/Shopping Centers/mall4.jpg";
+import mallImg5 from "../../assets/Shopping Centers/mall5.jpg";
+import mallImg6 from "../../assets/Shopping Centers/mall6.jpg";
+import mallImg7 from "../../assets/Shopping Centers/mall7.jpg";
+import mallImg8 from "../../assets/Shopping Centers/mall8.jpg";
 
 const shoppingData = [
   {

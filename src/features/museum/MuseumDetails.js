@@ -6,9 +6,9 @@ import { FiChevronLeft, FiWifi, FiCoffee } from 'react-icons/fi';
 import { FaStar, FaUsers, FaCar, FaTree, FaUtensils, FaBath, FaHiking, FaBuilding } from 'react-icons/fa';
 import { IoEyeSharp } from 'react-icons/io5';
 
-import defaultMuseumImg from './assets/Historical Musium Places/gem 1.jpg';
-import gem2Img from './assets/Historical Musium Places/gem 2.jpg';
-import gem3Img from './assets/Historical Musium Places/gem 3.png';
+import defaultMuseumImg from '../../assets/Historical Musium Places/gem 1.jpg';
+import gem2Img from '../../assets/Historical Musium Places/gem 2.jpg';
+import gem3Img from '../../assets/Historical Musium Places/gem 3.png';
 
 
 const museumGalleries = {

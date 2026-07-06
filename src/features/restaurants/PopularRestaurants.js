@@ -8,10 +8,10 @@ import { FaRegHeart, FaHeart } from "react-icons/fa";
 import { HiMapPin } from "react-icons/hi2";
 import { AiFillStar } from "react-icons/ai";
 
-import abuTarekImg  from "./assets/Koshary.jpg";
-import elHatyImg    from "./assets/ElHaty.jpg";
-import gadImg       from "./assets/King Burger.png";
-import starbucksImg from "./assets/Strubuks.png";
+import abuTarekImg  from "../../assets/Koshary.jpg";
+import elHatyImg    from "../../assets/ElHaty.jpg";
+import gadImg       from "../../assets/King Burger.png";
+import starbucksImg from "../../assets/Strubuks.png";
 
 const restaurantsData = [
   { id: 1, name: "Abu Tarek",  location: "Downtown Cairo",      rating: "5.0", discount: "10% Off",   status: "Open Now",        tag: "Most Visited", image: abuTarekImg },

@@ -6,13 +6,13 @@ import { GoLocation } from "react-icons/go";
 import { FaStar, FaHeart } from "react-icons/fa";
 import { HiOutlineTicket } from "react-icons/hi2";
 
-import cornicheImg1 from "./assets/Pedestrian Paths/corniche1.png";
-import cornicheImg2 from "./assets/Pedestrian Paths/corniche2.jpg";
-import cornicheImg3 from "./assets/Pedestrian Paths/corniche3.png";
-import cornicheImg4 from "./assets/Pedestrian Paths/corniche4.png";
-import cornicheImg5 from "./assets/Pedestrian Paths/corniche5.png";
-import cornicheImg6 from "./assets/Pedestrian Paths/corniche6.png";
-import cornicheImg7 from "./assets/Pedestrian Paths/corniche7.png";
+import cornicheImg1 from "../../assets/Pedestrian Paths/corniche1.png";
+import cornicheImg2 from "../../assets/Pedestrian Paths/corniche2.jpg";
+import cornicheImg3 from "../../assets/Pedestrian Paths/corniche3.png";
+import cornicheImg4 from "../../assets/Pedestrian Paths/corniche4.png";
+import cornicheImg5 from "../../assets/Pedestrian Paths/corniche5.png";
+import cornicheImg6 from "../../assets/Pedestrian Paths/corniche6.png";
+import cornicheImg7 from "../../assets/Pedestrian Paths/corniche7.png";
 
 const cornicheData = [
   {

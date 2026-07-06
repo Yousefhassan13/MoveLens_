@@ -7,9 +7,9 @@ import { GoLocation } from "react-icons/go";
 import { FaStar, FaHeart } from "react-icons/fa";
 import { HiOutlineTicket } from "react-icons/hi2";
 
-import gemImg  from "./assets/Historical Musium Places/gem 1.jpg";
-import gem2Img from "./assets/Historical Musium Places/gem 2.jpg";
-import gem3Img from "./assets/Historical Musium Places/gem 3.png";
+import gemImg  from "../../assets/Historical Musium Places/gem 1.jpg";
+import gem2Img from "../../assets/Historical Musium Places/gem 2.jpg";
+import gem3Img from "../../assets/Historical Musium Places/gem 3.png";
 
 const museumsData = [
   { id: 1, name: "Grand Egyptian Museum", location: "Giza",          rating: "4.9", discount: "10% Off", price: "200 EGP", tag: "Recommended",  image: gemImg  },

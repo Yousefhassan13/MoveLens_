@@ -1,62 +1,62 @@
 import React, { useState, useMemo } from "react";
-import "./MoodPage.css";
+import '../explore/MoodPage.css';
 import { useNavigate } from "react-router-dom";
 import { FiSearch, FiChevronLeft } from "react-icons/fi";
 import { GoLocation } from "react-icons/go";
 import { IoTimeOutline, IoAccessibilityOutline } from "react-icons/io5";
 import { FaStar } from "react-icons/fa";
 
-import amusementImg from "./assets/Shopping Centers/mall1.jpg";
-import fishGardenImg from "./assets/Historical Musium Places/gem 5.jpg";
-import pyramidsImg   from "./assets/Green Garden/zoo3.jpg";
+import shoppingImg  from "../../assets/Shopping Centers/mall3.jpg";
+import religiousImg from "../../assets/Pedestrian Paths/corniche4.png";
+import balloonImg   from "../../assets/Pedestrian Paths/corniche5.png";
 
-const familyPlacesData = [
+const romanticPlacesData = [
   {
     id: 1,
-    title: "Amusement Parks",
-    image: amusementImg,
-    rating: "4.5",
+    title: "Shopping Center",
+    image: shoppingImg,
+    rating: "4.6",
     reviews: "2,244",
     distance: "0.5 km Away",
-    availability: "Open Daily 10AM–10PM",
-    visitors: "2,450 Visitors",
+    availability: "Open Daily 10AM–11PM",
+    visitors: "4,300 Visitors",
     popular: true,
     path: "/shopping",
   },
   {
     id: 2,
-    title: "Fish Gardens",
-    image: fishGardenImg,
-    rating: "4.3",
-    reviews: "1,560",
-    distance: "1.1 km Away",
-    availability: "Open Daily 9AM–5PM",
-    visitors: "1,800 Visitors",
+    title: "Religious Landmarks",
+    image: religiousImg,
+    rating: "4.7",
+    reviews: "2,560",
+    distance: "0.8 km Away",
+    availability: "Open Daily",
+    visitors: "3,100 Visitors",
     popular: true,
-    path: "/museums",
+    path: "/religious",
   },
   {
     id: 3,
-    title: "Pyramids",
-    image: pyramidsImg,
-    rating: "4.9",
-    reviews: "8,100",
-    distance: "2.5 km Away",
-    availability: "Open Daily 8AM–5PM",
-    visitors: "9,500 Visitors",
-    popular: true,
-    path: "/gardens",
+    title: "Hot Air Balloon",
+    image: balloonImg,
+    rating: "4.8",
+    reviews: "980",
+    distance: "3.0 km Away",
+    availability: "Available at Sunrise",
+    visitors: "860 Visitors",
+    popular: false,
+    path: "/museums",
   },
 ];
 
-export default function FamilyPlaces() {
+export default function RomanticPlaces() {
   const navigate = useNavigate();
   const [query, setQuery] = useState("");
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
-    if (!q) return familyPlacesData;
-    return familyPlacesData.filter((p) => p.title.toLowerCase().includes(q));
+    if (!q) return romanticPlacesData;
+    return romanticPlacesData.filter((p) => p.title.toLowerCase().includes(q));
   }, [query]);
 
   return (
@@ -69,7 +69,7 @@ export default function FamilyPlaces() {
         >
           <FiChevronLeft />
         </button>
-        <h1>Family Places</h1>
+        <h1>Romantic Places</h1>
       </header>
 
       <div className="mood-page-search-box" role="search">

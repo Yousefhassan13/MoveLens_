@@ -3,10 +3,10 @@ import "./RestaurantList.css";
 import { useNavigate } from 'react-router-dom';
 
 
-import abuTarekImg from "./assets/Koshary.jpg";
-import elHatyImg from "./assets/ElHaty.jpg";
-import gadImg from "./assets/King Burger.png";
-import starbucksImg from "./assets/Strubuks.png";
+import abuTarekImg from "../../assets/Koshary.jpg";
+import elHatyImg from "../../assets/ElHaty.jpg";
+import gadImg from "../../assets/King Burger.png";
+import starbucksImg from "../../assets/Strubuks.png";
 
 
 const restaurantsData = [

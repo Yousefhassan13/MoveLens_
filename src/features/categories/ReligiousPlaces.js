@@ -1,14 +1,14 @@
 import React, { useState, useMemo } from "react";
-import "./MoodPage.css";
+import '../explore/MoodPage.css';
 import { useNavigate } from "react-router-dom";
 import { FiSearch, FiChevronLeft } from "react-icons/fi";
 import { GoLocation } from "react-icons/go";
 import { IoTimeOutline, IoAccessibilityOutline } from "react-icons/io5";
 import { FaStar } from "react-icons/fa";
 
-import cornicheWalkImg  from "./assets/Religious Sites/mosque1.jpg";
-import fineDiningImg    from "./assets/Religious Sites/mosque3.jpg";
-import quietGardensImg  from "./assets/Religious Sites/mosque4.jpg";
+import cornicheWalkImg  from "../../assets/Religious Sites/mosque1.jpg";
+import fineDiningImg    from "../../assets/Religious Sites/mosque3.jpg";
+import quietGardensImg  from "../../assets/Religious Sites/mosque4.jpg";
 
 const religiousPlacesData = [
   {
